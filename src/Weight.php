@@ -1,15 +1,17 @@
 <?php
 
 namespace RustamAliHussaini\WeightConversions;
-
+ use SebastianBergmann\LinesOfCode\IllogicalValuesException;
 class Weight
 {
-    public static function kilograms(float $kilograms): self
-    {
-        return new static($kilograms);
+    public static function kilograms(float $kilograms): self{
+        return new static($kilograms)
+        ;
     }
 
-    public function __construct(protected float $kilograms) {}
+    public function __construct(protected float $kilograms)
+{
+    }
 
     public function toPounds(): float
     {
